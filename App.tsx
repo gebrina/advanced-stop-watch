@@ -35,13 +35,14 @@ const Button = styled.button<ButtonProps>`
     background:${(props) => props.bg};
     disabled:${(props) => props.disabled};
     cursor:${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+    opacity:${(props) => (props.disabled ? .5 : 1)};
     margin:10px;
     padding:5px 15px;
     font-size:20px;
     font-weight:bold;
     color:#fff;
     border-radius:5px;
-    &:hover{
+    &[disabled="false"]:hover{
       opacity:.7;
       transition:all .5s ease;
     }
